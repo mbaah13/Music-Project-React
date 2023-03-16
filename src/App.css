@@ -13,10 +13,10 @@
   }
 }
 
-/* .App-div {
-  
- 
-} */
+.App-div {
+  background-color: #CCCEEE;
+ }
+
 .nav-header {
   display: flex;
   flex-direction: row;
@@ -88,12 +88,17 @@
   display: flex;
   margin: 3em;
   font-size: 5em;
+  color: #522844;
 }
+
 .about-content{
   font-size: 2.5em;
   display: flex;
   flex-direction: column;
-  
+}
+
+.about-content-title-div p{
+  color: black;
 }
 
 .about-content-title-div{
@@ -102,6 +107,7 @@ justify-content: center;
 flex-direction: column;
 width: 50%;
 margin: auto;
+color: #101F5B;
 }
 
 .about-content-title{
@@ -110,13 +116,12 @@ margin: auto;
   justify-content: space-between;
   align-items: center;
   width: 20em;
-
 }
 
 .about-content-title h1{
   font-size: 10em;
-  
 }
+
 .number{
   margin: 0;
 }
