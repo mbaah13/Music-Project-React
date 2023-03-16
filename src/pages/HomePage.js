@@ -13,12 +13,12 @@ function App() {
     <div className="App">
       <Layout>
         <div className="container container-homepage">
-        {/* <Image /> */}
-        {/* <Paragraph>
+        <Image />
+        <Paragraph>
           Learn all the <code>Languages</code> 
         </Paragraph>
         <ATag>Learn {framework}</ATag>
-       <FrameworkInput setFramework={setFramework} /> */}
+       <FrameworkInput setFramework={setFramework} />
        </div>
       </Layout>
     </div>

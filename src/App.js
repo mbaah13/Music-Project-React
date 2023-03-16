@@ -6,19 +6,23 @@ import About from "./pages/About";
 import MusicServices from "./pages/MusicServices";
 import Contact from "./pages//Contact";
 import GetStarted from "./pages/GetStarted";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
-  const [framework, setFramework] = useState("");
+  // const [framework, setFramework] = useState("");
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="about" element={<About />} />
-        <Route path="music-services" element={<MusicServices />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="get-started" element={<GetStarted />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<About />} />
+          <Route path="music-services" element={<MusicServices />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="get-started" element={<GetStarted />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
