@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { FrameworkReducer } from '../src/reducers/FrameworkReducer/frameworkSlice';
+import frameworkSlice from './reducers/FrameworkReducer';
 
 export default configureStore({ reducer: {
-    framework: FrameworkReducer
+    framework: frameworkSlice.reducer
 },})

@@ -15,4 +15,4 @@ export const frameworkSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const { setFramework } = frameworkSlice.actions;
 
-export default frameworkSlice.reducer;
+export default frameworkSlice;
