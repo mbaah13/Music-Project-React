@@ -17,9 +17,9 @@ app.get('/maggie', (req, res) => {
     res.json({ message: "Hello from maggie!" });
 });
 
-app.get('/mongodb', (req, res) => { 
-    let collection = db.collection("ui-data");
-    let results = collection.find({})
+app.get('/mongodb', async (req, res) => { 
+    let collection = await db.collection("ui-data");
+    let results = await collection.find({})
      .limit(50)
      .toArray();
    
