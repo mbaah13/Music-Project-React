@@ -7,16 +7,16 @@ import { useEffect } from "react";
 function About() {
   // const [framework, setFramework] = useState("");
   const [dbdata, setDbdata] = useState("");
-async function fetchMongo(){
-  await fetch("http://localhost:8000/mongodb")
-  .then((res) => res.json())
-  .then((data) => setDbdata(data));
-}
 
+  async function fetchMongo() {
+    const data = await fetch("http://localhost:8000/mongodb");
+    const newDbdata = await data.json();
+    setDbdata(newDbdata);
+  }
   useEffect(() => {
     fetchMongo();
   }, []);
- console.log(dbdata)
+  console.log(dbdata);
   return (
     <div className="App">
       <Layout>
@@ -25,14 +25,16 @@ async function fetchMongo(){
             Music is the mediator of the <br />
             spiritual and Soul{" "}
           </h1>
-          {dbdata.map((data) => (
+          {Array.isArray(dbdata) ?
+          dbdata.map((data) => (
             <AboutPageContent
+              key={data.number}
               title={data.title}
               number={data.number}
               paragraph={data.paragraph}
               imageUrl={data.imageUrl}
             />
-          ))}
+          )) : ""}
 
           {/* <AboutPageContent
             title="Music is the Way"
